@@ -1,9 +1,9 @@
 const express = require("express");
  const app = express();
-//  const cors = require('cors')
+ const cors = require('cors')
 
 
-//  app.use(cors());
+ app.use(cors());
    app.get('/',(req,res)=>{
     res.send('Server Express contestando a peticion get')
     
@@ -13,6 +13,6 @@ const express = require("express");
     res.send('Server Express contestando a peticion post')
  })
 
- app.listen(3000, ()=>{
-    console.log('Escuchando Server Express puerto 3000')
+ app.listen(5000, ()=>{
+    console.log('Escuchando Server Express puerto 5000')
  })
