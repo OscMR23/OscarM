@@ -6,20 +6,27 @@
     <title>Document</title>
 </head>
 <body>
-    <form>
-        <button type="button" id="btn_peticion">Peticion</button>
+    <form target="resultado" method="GET" action="http://localhost:3001">
+        <button id="btnform" type="submit">Peticion Form</button>
+        <button id="btnJs" type="button">Peticion Js</button>
     </form>
+        <iframe name="resultado"></iframe>
+ 
+    
+    <!-- <form>
+        <button type="button" id="btn_peticion">Peticion</button>
+    </form> -->
     <script>
-        document.getElementById("btn_peticion").addEventListener("click", async () => {
-            try {
-                const response = await fetch("http://localhost:3000");
-                const dato = await response.text();
-                console.log(dato);
-            } catch (error) {
-                console.error("Error en la petición:", error);
-            }
+        document.getElementById("btnJs").addEventListener("click",()=>{
+            
+                let response  = `http://localhost:3001`;
+                fetch(response)
+                .then(res => res.text())
+                .then(dato => {console.log(dato)
+
+                })
         });
-    </script>
+    </script>           
     
 </body>
 </html>
