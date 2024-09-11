@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form target="resultado" method="GET" action="http://localhost:3001">
+        <button id="btnform" type="submit">Peticion Form</button>
+        <button id="btnJs" type="button">Peticion Js</button>
+    </form>
+        <iframe name="resultado"></iframe>
+ 
+    
+    <!-- <form>
+        <button type="button" id="btn_peticion">Peticion</button>
+    </form> -->
+    <script>
+        document.getElementById("btnJs").addEventListener("click",()=>{
+            
+                let response  = `http://localhost:3001`;
+                fetch(response)
+                .then(res => res.text())
+                .then(dato => {console.log(dato)
+
+                })
+        });
+    </script>           
+    
+</body>
+</html>
