@@ -8,6 +8,7 @@ require('body-parser-xml')(bodyParser)
 const upload = multer();
 
 
+
 app.use(cors({origin:"*"})) //app.use(cors()) //middleware de terceros
 app.use(express.json());
 app.use(express.text()); //middleware incorporado en express
@@ -20,6 +21,8 @@ return await mysql.createConnection({
     database: 'clientes',  // Cambia el nombre de la base de datos si es necesario
     });
 }
+
+app.use(router);
 
 let connection;
 
