@@ -6,11 +6,11 @@ const express = require('express');
  const upload = multer()
 
  const bodyParser = require('body-parser');
-require('body-parser-xml')(bodyParser);
+require('body-parser-xml')(bodyParser)
 
  
 
-
+//hola
 app.use(cors({origin:'*'}));  //middleware de terceros
 
    // app.use((req,res,next)=>{  //middleware de aplciaicon
