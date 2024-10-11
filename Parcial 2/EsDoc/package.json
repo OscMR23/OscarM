@@ -1,0 +1,12 @@
+{
+  "name": "esdoc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "doc": "esdoc"
+  },
+  "devDependencies": {
+    "esdoc": "^1.0.0"
+  }
+}
