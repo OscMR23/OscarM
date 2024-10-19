@@ -2,6 +2,9 @@
 const express = require('express');
 const cors = require('cors');
 const mysql = require('mysql2');
+const https = require('https')
+const fs = require('fs')
+const path = require('path')
 const { check, validationResult } = require('express-validator');
 
 const app = express();
@@ -48,6 +51,12 @@ app.post("/cliente", [
         res.json({ mensaje: 'Cliente agregado correctamente' });
     });
 });
+
+const options = {
+    key : fs.readFileSync(path.join(__dirname,'certificado/key.pem')),
+    cert : fs.readFileSync(path.join(__dirname,'certificado/cert.pem'))
+
+}
 
 // Escuchar en el puerto 8001
 app.listen(8001, () => {
