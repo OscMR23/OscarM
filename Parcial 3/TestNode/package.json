@@ -8,5 +8,9 @@
   "author": "",
   "license": "ISC",
   "description": "",
-  "type":"module"
+  "type": "module",
+  "dependencies": {
+    "chai": "^5.1.2",
+    "mocha": "^10.8.2"
+  }
 }
