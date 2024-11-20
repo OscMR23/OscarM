@@ -1,0 +1,176 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+header {
+    background-color: #007bff;
+    color: #fff;
+    padding: 1.5rem 0;
+    text-align: center;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 2rem auto;
+}
+
+/* Sección del formulario */
+.form-section {
+    background: #fff;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+.form-section h2 {
+    margin-bottom: 1rem;
+    color: #007bff;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+input, textarea, select {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+textarea {
+    resize: none;
+    height: 100px;
+}
+
+.btn {
+    display: inline-block;
+    background: #007bff;
+    color: #fff;
+    padding: 0.8rem 1.2rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    text-align: center;
+}
+
+.btn:hover {
+    background: #0056b3;
+}
+
+/* Sección de tareas */
+.tasks-section {
+    background: #fff;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.tasks-section h2 {
+    margin-bottom: 1rem;
+    color: #007bff;
+}
+
+.search-container {
+    margin-bottom: 1rem;
+}
+
+.search-bar {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+/* Diseño de las tarjetas de tareas */
+.tasks-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.task-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.task-card:hover {
+    transform: scale(1.02);
+}
+
+.task-card h3 {
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.task-card p {
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.task-card .actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+}
+
+.task-card .btn {
+    font-size: 0.8rem;
+    padding: 0.5rem;
+    margin: 0;
+}
+
+.task-card .btn.edit {
+    background: #ffc107;
+}
+
+.task-card .btn.delete {
+    background: #dc3545;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 2rem;
+    padding: 1rem 0;
+    background: #f1f1f1;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .form-section, .tasks-section {
+        padding: 1rem;
+    }
+
+    .btn {
+        width: 100%;
+    }
+}

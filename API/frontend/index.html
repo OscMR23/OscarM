@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Tareas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Gestión de Tareas</h1>
+    </header>
+
+    <main class="container">
+        <!-- Formulario para agregar o editar tareas -->
+        <section class="form-section">
+            <h2>Crear/Editar Tarea</h2>
+            <form id="taskForm">
+                <input type="hidden" id="taskId">
+                <div class="form-group">
+                    <label for="title">Título</label>
+                    <input type="text" id="title" placeholder="Título" required>
+                </div>
+                <div class="form-group">
+                    <label for="description">Descripción</label>
+                    <textarea id="description" placeholder="Descripción" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="type">Tipo</label>
+                    <select id="type" required>
+                        <option value="" disabled selected>Seleccione el tipo</option>
+                        <option value="cotidiana">Cotidiana</option>
+                        <option value="laboral">Laboral</option>
+                        <option value="escolar">Escolar</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn">Guardar Tarea</button>
+            </form>
+        </section>
+
+        <!-- Buscador y listado de tareas -->
+        <section class="tasks-section">
+            <h2>Tareas</h2>
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Buscar tarea por título..." class="search-bar">
+            </div>
+            <div id="tasksContainer" class="tasks-container">
+                <!-- Las tareas se mostrarán como tarjetas -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2024 Gestión de Tareas | Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
