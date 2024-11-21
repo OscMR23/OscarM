@@ -4,11 +4,14 @@ const app = express();
 const swaggerUI = require("swagger-ui-express");
 const swaggerJsDoc = require("swagger-jsdoc"); // Crea una instancia de la aplicación Express
 const cors = require("cors"); // Importa el módulo CORS
+const port = process.env.PORT || 8082;
+
+
 
 app.use(cors()); // Habilita CORS para permitir solicitudes de otros dominios, si es necesario
 
 app.get("/empleado", (req, res) => {
-  res.json({ message: "Servidor funcionando en 3001" }); // Responde con un mensaje JSON
+  res.json({ message: "Servidor funcionando en 8082" }); // Responde con un mensaje JSON
 });
 
 const swaggerOptions = {
@@ -18,7 +21,7 @@ const swaggerOptions = {
       title: "API Tareas",
       version: "1.0.0",
     },
-    servers: [{ url: "http://localhost:3001" }],
+    servers: [{ url: "http://localhost:${port}" }],
   },
   apis: [`${path.join(__dirname, "index.js")}`],
 };
@@ -34,10 +37,10 @@ const swaggerOptions = {
  */
 
 const swaggerDocs = swaggerJsDoc(swaggerOptions);
-app.get("/api-docs", swaggerUI.serve, swaggerUI.setup(swaggerDocs));
+app.use("/api-docs", swaggerUI.serve, swaggerUI.setup(swaggerDocs));
 
 app.get("/api-spec",(req,res)=>{
   res.json(swaggerDocs)
 })
 
-app.listen(3001, () => console.log("Server is listening on 3001")); // Inicia el servidor en el puerto 8082
+app.listen(port, () => console.log("Server is listening on ${port}")); // Inicia el servidor en el puerto 8082

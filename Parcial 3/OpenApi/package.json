@@ -3,6 +3,7 @@
     "cors": "^2.8.5",
     "express": "^4.21.1",
     "swagger-jsdoc": "^6.2.8",
+    "swagger-themes": "^1.4.3",
     "swagger-ui-express": "^5.0.1"
   },
   "name": "openapi",
